@@ -43,6 +43,7 @@ public class ExampleTest {
         try {
             examplesHomePage.clickCheckboxes();
             checkboxPage.isCheckboxHeaderDisplayed();
+            Thread.sleep(1000);
             Assert.assertTrue(checkboxPage.clickCheckboxTwo());
         } catch (Exception e) {
             log.info("verifyCheckBoxFunctionality : FAIL");
@@ -55,6 +56,7 @@ public class ExampleTest {
         try {
             examplesHomePage.clickDropdown();
             dropdownPage.isDropdownHeaderDisplayed();
+            Thread.sleep(1000);
             dropdownPage.changeOptionFromDropdown();//need to assert selected value
         } catch (Exception e) {
             log.info("verifyCheckBoxFunctionality : FAIL");
@@ -79,6 +81,7 @@ public class ExampleTest {
         try {
             examplesHomePage.clickInputs();
             inputsPage.isInputHeaderDisplayed();
+            Thread.sleep(1000);
             forgotPasswordFunction.inputNumber("13");
         } catch (Exception e) {
             log.info("verifyCheckBoxFunctionality : FAIL");
@@ -91,6 +94,7 @@ public class ExampleTest {
         try {
             examplesHomePage.clickAddRemoveElements();
             addRemoveElementsPage.isCheckboxHeaderDisplayed();
+            Thread.sleep(1000);
             addRemoveElementsPage.clickAddElement();
             addRemoveElementsPage.clickDeleteElement();
         } catch (Exception e) {
