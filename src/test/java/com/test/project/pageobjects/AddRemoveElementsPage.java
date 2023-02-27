@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class AddRemoveElementsPage extends BaseClass {
-
-    //https://the-internet.herokuapp.com/add_remove_elements/
     private final By lblAddRemoveHeader = By.xpath("//h3[normalize-space()='Add/Remove Elements']");
     private final By btnAddElements = By.xpath("//button[normalize-space()='Add Element']");
     private final By btnRemoveElements = By.xpath("//*[@class=\"added-manually\" and text()='Delete']");
@@ -16,7 +14,7 @@ public class AddRemoveElementsPage extends BaseClass {
         super(driver);
     }
 
-    public boolean isCheckboxHeaderDisplayed() throws Exception {
+    public boolean isAddRemoveElementsHeaderDisplayed() throws Exception {
         try {
             return driver.findElement(lblAddRemoveHeader).isDisplayed();
         } catch (Exception ex) {

@@ -14,6 +14,7 @@ public class ExamplesHomePage extends BaseClass {
     private final By linkForgotPW = By.xpath("//a[normalize-space()='Forgot Password']");
     private final By linkInput = By.xpath("//a[normalize-space()='Inputs']");
     private final By linkAddRemoveElements = By.xpath("//a[normalize-space()='Add/Remove Elements']");
+    private final By linkHover = By.xpath("//*[@id=\"content\"]//li[25]/a[text()=\"Hovers\"]");
 
 
     public ExamplesHomePage(WebDriver driver) {
@@ -71,6 +72,14 @@ public class ExamplesHomePage extends BaseClass {
     public void clickAddRemoveElements() throws Exception {
         try {
             driver.findElement(linkAddRemoveElements).click();
+        } catch (Exception ex) {
+            throw ex;
+        }
+    }
+
+    public void clickHovers() throws Exception {
+        try {
+            driver.findElement(linkHover).click();
         } catch (Exception ex) {
             throw ex;
         }
