@@ -15,7 +15,7 @@ public class ForgotPasswordPage extends BaseClass {
         super(driver);
     }
 
-    public boolean isForgotPWDisplayed() throws Exception {
+    public boolean isForgotPWHeaderDisplayed() throws Exception {
         try {
             return driver.findElement(lblForgotPasswordHeader).isDisplayed();
         } catch (Exception ex) {

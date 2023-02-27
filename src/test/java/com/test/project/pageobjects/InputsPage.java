@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class InputsPage extends BaseClass {
-
-    //https://the-internet.herokuapp.com/inputs
     private final By lblInputsHeader = By.xpath("//h3[normalize-space()='Inputs']");
     private final By lblNumber = By.xpath("//p[normalize-space()='Number']");
     private final By txtNumber = By.xpath("//input[@type='number']");
