@@ -1,4 +1,4 @@
-# UI components Automation
+# Web UI Automation
 
 This project contains automated test cases for an https://the-internet.herokuapp.com/ site.
 
@@ -12,12 +12,12 @@ This project contains automated test cases for an https://the-internet.herokuapp
 * Git
 
 ###### Checkout the branch
-      git clone (https://github.com/dameesha13/WebUIAutomationTestForComponents.git)
+      git clone (https://github.com/dameesha13/WebUIAutomationTest.git)
 
 ###### Run the code using maven goal
 
 ```
-mvn clean install test -DsuiteXmlFile="ComponentsUIAutomation.xml" 
+mvn clean install test -DsuiteXmlFile="ExampleTestAutomation.xml" 
 ```
 
 Project structure as below.
