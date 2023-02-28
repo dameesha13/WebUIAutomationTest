@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 
 public class ExamplesHomePage extends BaseClass {
 
-    //https://the-internet.herokuapp.com/
     private final By lblWelcomeHeader = By.xpath("//h1[normalize-space()='Welcome to the-internet']");
     private final By lblAvailableExamplesHeader = By.xpath("//h2[normalize-space()='Available Examples']");
     private final By linkCheckboxes = By.xpath("//a[normalize-space()='Checkboxes']");

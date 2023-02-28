@@ -20,9 +20,6 @@ public class DriverSetup {
 
         //Maximize the Window
         driver.manage().window().maximize();
-
         return driver;
-
     }
-
 }

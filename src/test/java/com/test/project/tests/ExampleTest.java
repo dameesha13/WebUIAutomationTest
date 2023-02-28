@@ -3,12 +3,17 @@ package com.test.project.tests;
 import com.test.project.functions.ForgotPasswordFunction;
 import com.test.project.functions.InputFunction;
 import com.test.project.pageobjects.*;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.File;
 
 import static com.test.project.utils.DriverSetup.setUp;
 
@@ -49,10 +54,11 @@ public class ExampleTest {
             examplesHomePage.clickCheckboxes();
             checkboxPage.isCheckboxHeaderDisplayed();
             Thread.sleep(2000);
-            //checkboxPage.clickRandomCheckbox();
             Assert.assertTrue(checkboxPage.isSelectedCheckbox());
         } catch (Exception e) {
             log.info("verifyCheckBoxFunctionality : FAIL");
+            File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshotFile, new File("c://FailedCheckboxTest.png"));
             throw e;
         }
     }
@@ -68,6 +74,8 @@ public class ExampleTest {
             Assert.assertTrue(dropdownPage.isDropdownSelectedValueDisplayed());
         } catch (Exception e) {
             log.info("verifyDropdownFunctionality : FAIL");
+            File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshotFile, new File("c://FailedDropdownTest.png"));
             throw e;
         }
     }

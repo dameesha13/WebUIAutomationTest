@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 
 public class ForgotPasswordPage extends BaseClass {
 
-    //https://the-internet.herokuapp.com/forgot_password
     private final By lblForgotPasswordHeader = By.xpath("//h2[normalize-space()='Forgot Password']");
     private final By txtEmail = By.id("email");
     private final By btnRetrievePassword = By.id("form_submit");
