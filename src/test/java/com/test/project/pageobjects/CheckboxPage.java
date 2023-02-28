@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class CheckboxPage extends BaseClass {
@@ -37,7 +36,7 @@ public class CheckboxPage extends BaseClass {
         }
     }
 
-   public void clickCheckbox() throws Exception {
+    public void clickCheckbox() throws Exception {
         try {
             driver.findElement(chkCheckboxOneOrTwo).click();
         } catch (Exception ex) {
@@ -58,8 +57,7 @@ public class CheckboxPage extends BaseClass {
             List<WebElement> checkboxes = driver.findElements(By.xpath("(//input[@type='checkbox'])"));
             int size = checkboxes.size();
             int randomNumber = ThreadLocalRandom.current().nextInt(0, size);
-            if(!checkboxes.get(randomNumber).isSelected())
-            {
+            if (!checkboxes.get(randomNumber).isSelected()) {
                 checkboxes.get(randomNumber).click();
             }
         } catch (Exception ex) {

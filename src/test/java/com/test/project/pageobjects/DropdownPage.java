@@ -4,10 +4,8 @@ import com.test.project.utils.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class DropdownPage extends BaseClass {
@@ -40,8 +38,8 @@ public class DropdownPage extends BaseClass {
             List<WebElement> itemsInDropdown = driver
                     .findElements(By.xpath("//*[@id=\"dropdown\"]/option"));
             int size = itemsInDropdown.size();
-            int randnMumber = ThreadLocalRandom.current().nextInt(1, size);
-            itemsInDropdown.get(randnMumber).click();
+            int randomNumber = ThreadLocalRandom.current().nextInt(1, size);
+            itemsInDropdown.get(randomNumber).click();
         } catch (Exception ex) {
             throw ex;
         }

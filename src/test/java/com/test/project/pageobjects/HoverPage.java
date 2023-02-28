@@ -7,9 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
-
 public class HoverPage extends BaseClass {
 
     private final By lblHoverHeader = By.xpath("//h3[normalize-space()='Hovers']");
@@ -31,7 +28,7 @@ public class HoverPage extends BaseClass {
         try {
             Actions builder = new Actions(driver);
             WebElement we = driver.findElement(By.xpath("//div[@class='example']//div[1]//img[1]"));
-            Action perf= builder.moveToElement(we).build();
+            Action perf = builder.moveToElement(we).build();
             perf.perform();
             Thread.sleep(1000);
         } catch (Exception ex) {

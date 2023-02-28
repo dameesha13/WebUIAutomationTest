@@ -3,7 +3,6 @@ package com.test.project.pageobjects;
 import com.test.project.utils.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 
 public class InputsPage extends BaseClass {
     private final By lblInputsHeader = By.xpath("//h3[normalize-space()='Inputs']");
